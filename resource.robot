@@ -1,4 +1,3 @@
-# TODO: Would be easier to parse as pandas table. Can I just use Sillenium outside of rob
 *** Settings ***
 Documentation     A resource file for checking Steamship ferry availability.
 Library           SeleniumLibrary     run_on_failure=NOTHING
@@ -9,7 +8,7 @@ Library           String
 ${STEAMSHIP URL}  https://www.steamshipauthority.com/schedules/availability
 ${BROWSER}        headlesschrome
 ${DELAY}          0
-${PUSHBULLET KEY}    x.abcdefghijklmnopqrstuvwxyz012345
+${PUSHBULLET KEY}    o.WsFOYRwuiBUF0VZwSiD1LZmcAM4PbEMw
 
 *** Keywords ***
 Open Browser To Login Page
