@@ -49,7 +49,7 @@ Find Availability
     ${before_int} =    Convert Time TO Integer    ${before}
 
     ${rows} =    Get Element Count    xpath://*[@class="${class_val}"]/table/tbody/tr
-    FOR    ${index}    IN RANGE    1    ${rows}
+    FOR    ${index}    IN RANGE    1    ${rows} + 1
         ${time_text} =    Get Text    xpath://*[@class="${class_val}"]/table/tbody/tr[${index}]/td[1]
         ${time_int} =    Convert Time To Integer    ${time_text}
         ${availability} =    Get Text    xpath://*[@class="${class_val}"]/table/tbody/tr[${index}]/td[6]
