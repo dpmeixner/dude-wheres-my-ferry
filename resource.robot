@@ -7,7 +7,7 @@ Library           String
 *** Variables ***
 ${STEAMSHIP URL}  https://www.steamshipauthority.com/schedules/availability
 ${BROWSER}        headlesschrome
-${DELAY}          0
+#${DELAY}          0
 ${PUSHBULLET KEY}    o.WsFOYRwuiBUF0VZwSiD1LZmcAM4PbEMw
 
 *** Keywords ***
@@ -16,7 +16,7 @@ Open Browser To Login Page
     ${options}=     Call Method     ${chrome_options}    to_capabilities
     Open Browser    ${STEAMSHIP URL}    ${BROWSER}
     Maximize Browser Window
-    Set Selenium Speed    ${DELAY}
+    #Set Selenium Speed    ${DELAY}
     Title Should Be    Car Reservation Availability to Nantucket & Martha’s Vineyard | The Steamship Authority
 
 Select Date From Datepicker
@@ -32,7 +32,9 @@ Select Route
     Select Date From Datepicker    depart_date    ${departure}
     Select Date From Datepicker    return_date    ${return}
     Click Button    Show Me
-    Wait Until Element Is Visible    class:returned_trips
+    #Wait Until Element Is Visible    class:returned_trips
+    Wait Until Page Contains    ${departure}
+    Wait Until Page Contains    ${return}
 
 Convert Time To Integer
     [Arguments]    ${clock_time}
