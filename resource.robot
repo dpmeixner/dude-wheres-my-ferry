@@ -3,7 +3,6 @@ Documentation     A resource file for checking Steamship ferry availability.
 Library           SeleniumLibrary     run_on_failure=NOTHING
 Library           DateTime
 Library           String
-Library	          XvfbRobot
 
 *** Variables ***
 ${STEAMSHIP URL}  https://www.steamshipauthority.com/schedules/availability
@@ -12,7 +11,6 @@ ${PUSHBULLET KEY}    o.WsFOYRwuiBUF0VZwSiD1LZmcAM4PbEMw
 
 *** Keywords ***
 Open Browser To Login Page
-    Start Virtual Display
     ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     ${options}=     Call Method     ${chrome_options}    to_capabilities
     Open Browser    ${STEAMSHIP URL}    ${BROWSER}
