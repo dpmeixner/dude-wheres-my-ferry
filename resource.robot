@@ -8,7 +8,6 @@ Library	          XvfbRobot
 *** Variables ***
 ${STEAMSHIP URL}  https://www.steamshipauthority.com/schedules/availability
 ${BROWSER}        headlesschrome
-#${DELAY}          0
 ${PUSHBULLET KEY}    o.WsFOYRwuiBUF0VZwSiD1LZmcAM4PbEMw
 
 *** Keywords ***
@@ -18,7 +17,6 @@ Open Browser To Login Page
     ${options}=     Call Method     ${chrome_options}    to_capabilities
     Open Browser    ${STEAMSHIP URL}    ${BROWSER}
     Maximize Browser Window
-    #Set Selenium Speed    ${DELAY}
     Title Should Be    Car Reservation Availability to Nantucket & Martha’s Vineyard | The Steamship Authority
 
 Select Date From Datepicker
