@@ -7,7 +7,7 @@ Library           String
 *** Variables ***
 ${STEAMSHIP URL}  https://www.steamshipauthority.com/schedules/availability
 ${BROWSER}        headlesschrome
-${PUSHBULLET KEY}    o.WsFOYRwuiBUF0VZwSiD1LZmcAM4PbEMw
+${PUSHBULLET KEY}    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 *** Keywords ***
 Open Browser To Login Page
