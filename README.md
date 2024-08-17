@@ -1,6 +1,6 @@
 # Dude, Where's My Ferry?
 
-This is a test stuie written for [Robot Framework](http://robotframework.org/) to check ferry availability from the Steamship Authority.
+This is a Python script to check ferry availability from the Steamship Authority.
 
 ## Requirements
 
@@ -8,11 +8,9 @@ TODO
 
 ## Setup
 
-Modify the `resource.robot` file to include your Pushbullet API key.
-
-Modify the `steamship.robot` file to select the route and dates you want to check availability for.
+Rename `secrets.py.backup` to `secrets.py` and modify it to include your Pushbullet API key
 
 ## Run
 
-Execute `robot steamship.robot` to run the test suite. You could also add it to a cron script to run periodically.
+Execute `python steamship.py` to run the test. You could also add it to a cron script to run periodically.
  
