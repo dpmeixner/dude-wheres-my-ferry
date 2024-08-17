@@ -2,3 +2,4 @@
 output.xml
 ignore/
 log.txt
+secrets.py
