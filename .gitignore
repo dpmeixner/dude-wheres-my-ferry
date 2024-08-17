@@ -1,3 +1,4 @@
 *.html
 output.xml
 ignore/
+log.txt
